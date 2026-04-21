@@ -30,59 +30,49 @@
 html, body { min-height: 100%; background: var(--paper); font-family: 'DM Sans', sans-serif; color: var(--ink); }
 .shell { display: flex; flex-direction: column; min-height: 100vh; max-width: 480px; margin: 0 auto; }
 
-/* Header */
-header { padding: 16px 20px 12px; border-bottom: 1px solid var(--cream); display: flex; align-items: center; justify-content: space-between; }
+header { padding: 14px 20px 10px; border-bottom: 1px solid var(--cream); display: flex; align-items: center; justify-content: space-between; }
 .brand { display: flex; align-items: baseline; gap: 8px; }
-.brand-name { font-family: 'DM Serif Display', serif; font-size: 24px; color: var(--ink); }
-.free-badge { font-size: 11px; padding: 2px 8px; border-radius: 99px; background: var(--success-bg); color: var(--success); font-weight: 500; letter-spacing: 0.05em; }
+.brand-name { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--ink); }
+.free-badge { font-size: 11px; padding: 2px 8px; border-radius: 99px; background: var(--success-bg); color: var(--success); font-weight: 500; }
 
-/* Tabs */
-.tabs { display: flex; padding: 0 20px; border-bottom: 1px solid var(--cream); }
-.tab { flex: 1; padding: 12px 0; font-size: 13px; font-weight: 500; color: var(--muted); background: none; border: none; cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -1px; transition: all 0.2s; }
+.tabs { display: flex; padding: 0 20px; border-bottom: 1px solid var(--cream); overflow-x: auto; }
+.tab { flex: 1; min-width: 80px; padding: 10px 4px; font-size: 12px; font-weight: 500; color: var(--muted); background: none; border: none; cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -1px; transition: all 0.2s; white-space: nowrap; text-align: center; }
 .tab.active { color: var(--ink); border-bottom-color: var(--gold); }
 
-/* Panels */
 .panels { flex: 1; }
-.panel { display: none; padding: 18px 20px 40px; }
+.panel { display: none; padding: 16px 20px 40px; }
 .panel.active { display: block; }
 
-/* Lang bar */
-.lang-bar { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; flex-wrap: wrap; }
+.lang-bar { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; flex-wrap: wrap; }
 .lang-bar label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; white-space: nowrap; }
-.lang-select { flex: 1; min-width: 80px; padding: 8px 28px 8px 10px; border-radius: var(--radius-sm); border: 1px solid var(--cream); background: white url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%238a8070' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat right 10px center; color: var(--ink); font-size: 14px; font-family: 'DM Sans', sans-serif; -webkit-appearance: none; appearance: none; }
-.swap-btn { width: 32px; height: 32px; border-radius: 50%; border: 1px solid var(--cream); background: white; color: var(--muted); font-size: 16px; cursor: pointer; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-.swap-btn:active { background: var(--cream); }
-.mix-tag { font-size: 11px; padding: 3px 10px; border-radius: 99px; background: var(--success-bg); color: var(--success); }
+.lang-select { flex: 1; min-width: 80px; padding: 7px 26px 7px 10px; border-radius: var(--radius-sm); border: 1px solid var(--cream); background: white url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%238a8070' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat right 10px center; color: var(--ink); font-size: 13px; font-family: 'DM Sans', sans-serif; -webkit-appearance: none; appearance: none; }
+.swap-btn { width: 30px; height: 30px; border-radius: 50%; border: 1px solid var(--cream); background: white; color: var(--muted); font-size: 15px; cursor: pointer; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.mix-tag { font-size: 11px; padding: 2px 9px; border-radius: 99px; background: var(--success-bg); color: var(--success); }
 
-/* Sect label */
 .sect-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 6px; }
-
-/* Textarea */
-textarea { width: 100%; padding: 13px; border-radius: var(--radius); border: 1px solid var(--cream); background: white; color: var(--ink); font-size: 15px; line-height: 1.65; resize: none; font-family: 'DM Sans', sans-serif; }
+textarea { width: 100%; padding: 12px; border-radius: var(--radius); border: 1px solid var(--cream); background: white; color: var(--ink); font-size: 15px; line-height: 1.65; resize: none; font-family: 'DM Sans', sans-serif; }
 textarea:focus { outline: none; border-color: var(--gold-light); }
 
-/* Buttons */
 .action-row { display: flex; gap: 8px; margin-top: 10px; }
-.btn { padding: 11px 20px; border-radius: var(--radius-sm); border: 1px solid var(--cream); background: white; color: var(--ink); font-size: 14px; font-weight: 500; cursor: pointer; font-family: 'DM Sans', sans-serif; transition: opacity 0.15s; }
+.btn { padding: 10px 18px; border-radius: var(--radius-sm); border: 1px solid var(--cream); background: white; color: var(--ink); font-size: 14px; font-weight: 500; cursor: pointer; font-family: 'DM Sans', sans-serif; }
 .btn:active { opacity: 0.7; }
 .btn-primary { background: var(--ink); color: var(--paper); border-color: var(--ink); flex: 1; }
 .btn-ghost { color: var(--muted); }
+.btn-live { background: var(--danger); color: white; border-color: var(--danger); flex: 1; font-size: 13px; }
+.btn-live.active { background: var(--success); border-color: var(--success); }
 
-/* Status */
 .status-line { font-size: 12px; color: var(--muted); margin-top: 8px; min-height: 20px; display: flex; align-items: center; gap: 6px; }
 .spinner { width: 12px; height: 12px; border: 2px solid var(--cream); border-top-color: var(--gold); border-radius: 50%; animation: spin 0.7s linear infinite; flex-shrink: 0; }
 @keyframes spin { to { transform: rotate(360deg); } }
 
-/* Output */
-.output-card { margin-top: 14px; padding: 15px; border-radius: var(--radius); background: white; border: 1px solid var(--cream); min-height: 80px; position: relative; }
-.output-card-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 8px; }
+.output-card { margin-top: 12px; padding: 14px; border-radius: var(--radius); background: white; border: 1px solid var(--cream); min-height: 72px; position: relative; }
+.output-card-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 6px; }
 .output-text { font-size: 15px; line-height: 1.7; color: var(--ink); white-space: pre-wrap; }
 .output-text.empty { color: var(--muted); font-style: italic; font-size: 13px; }
-.copy-btn { position: absolute; top: 12px; right: 12px; font-size: 11px; padding: 3px 10px; border-radius: 99px; border: 1px solid var(--cream); background: var(--paper); color: var(--muted); cursor: pointer; }
-.copy-btn:active { background: var(--cream); }
+.copy-btn { position: absolute; top: 10px; right: 10px; font-size: 11px; padding: 2px 9px; border-radius: 99px; border: 1px solid var(--cream); background: var(--paper); color: var(--muted); cursor: pointer; }
 
-/* ─── VOICE PANEL ─── */
-.rec-banner { display: flex; align-items: center; gap: 10px; padding: 10px 14px; border-radius: var(--radius-sm); font-size: 13px; font-weight: 500; margin-bottom: 14px; transition: all 0.25s; }
+/* Voice panel */
+.rec-banner { display: flex; align-items: center; gap: 10px; padding: 9px 13px; border-radius: var(--radius-sm); font-size: 13px; font-weight: 500; margin-bottom: 12px; transition: all 0.25s; }
 .rec-banner.idle      { background: var(--cream); color: var(--muted); }
 .rec-banner.recording { background: var(--danger-bg); color: var(--danger); }
 .rec-banner.done      { background: var(--success-bg); color: var(--success); }
@@ -91,54 +81,75 @@ textarea:focus { outline: none; border-color: var(--gold-light); }
 .rec-dot.blink { animation: blink 1s infinite; }
 @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.15} }
 
-/* Monitor card */
-.monitor-card { background: white; border: 1px solid var(--cream); border-radius: var(--radius); padding: 14px 16px; margin-bottom: 14px; }
-.monitor-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
+.monitor-card { background: white; border: 1px solid var(--cream); border-radius: var(--radius); padding: 12px 14px; margin-bottom: 12px; }
+.monitor-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
 .monitor-title { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); }
 .monitor-badge { font-size: 11px; padding: 2px 9px; border-radius: 99px; font-weight: 500; }
-.monitor-badge.off  { background: var(--cream); color: var(--muted); }
-.monitor-badge.on   { background: var(--danger-bg); color: var(--danger); }
-.monitor-badge.ok   { background: var(--success-bg); color: var(--success); }
-
-/* VU meter */
-.vu-track { height: 10px; border-radius: 5px; background: var(--cream); overflow: hidden; margin-bottom: 8px; position: relative; }
-.vu-fill { height: 100%; border-radius: 5px; background: linear-gradient(90deg, var(--success) 0%, var(--gold) 65%, var(--danger) 100%); width: 0%; transition: width 0.05s linear; }
+.monitor-badge.off { background: var(--cream); color: var(--muted); }
+.monitor-badge.on  { background: var(--danger-bg); color: var(--danger); }
+.monitor-badge.ok  { background: var(--success-bg); color: var(--success); }
+.vu-track { height: 8px; border-radius: 4px; background: var(--cream); overflow: hidden; margin-bottom: 6px; position: relative; }
+.vu-fill { height: 100%; border-radius: 4px; background: linear-gradient(90deg, var(--success) 0%, var(--gold) 65%, var(--danger) 100%); width: 0%; transition: width 0.05s linear; }
 .vu-peak { position: absolute; top: 0; bottom: 0; width: 2px; background: var(--danger); opacity: 0.7; transition: left 0.08s; }
-
-/* Waveform */
-.waveform-wrap { height: 44px; border-radius: 8px; background: var(--paper); overflow: hidden; }
-canvas#waveCanvas { width: 100%; height: 44px; display: block; }
-
-/* Stats */
-.monitor-stats { display: flex; gap: 16px; margin-top: 8px; }
+.waveform-wrap { height: 36px; border-radius: 6px; background: var(--paper); overflow: hidden; }
+canvas { width: 100%; height: 36px; display: block; }
+.monitor-stats { display: flex; gap: 14px; margin-top: 6px; }
 .monitor-stat { font-size: 11px; color: var(--muted); }
 .monitor-stat span { font-weight: 500; color: var(--ink); }
 
-/* Mic button */
-.mic-center { display: flex; flex-direction: column; align-items: center; gap: 10px; margin: 4px 0 14px; }
-.mic-outer { position: relative; width: 96px; height: 96px; display: flex; align-items: center; justify-content: center; }
+.mic-center { display: flex; flex-direction: column; align-items: center; gap: 10px; margin: 4px 0 12px; }
+.mic-outer { position: relative; width: 88px; height: 88px; display: flex; align-items: center; justify-content: center; }
 .mic-ring { position: absolute; inset: 0; border-radius: 50%; border: 1.5px solid var(--cream); pointer-events: none; transition: border-color 0.3s; }
 .mic-ring.active { border-color: var(--danger); animation: rpulse 1.6s ease-in-out infinite; }
 @keyframes rpulse { 0%,100%{transform:scale(1);opacity:1} 50%{transform:scale(1.13);opacity:0.3} }
-.mic-btn { width: 78px; height: 78px; border-radius: 50%; border: none; background: var(--ink); cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.2s, transform 0.15s; z-index: 1; }
+.mic-btn { width: 72px; height: 72px; border-radius: 50%; border: none; background: var(--ink); cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.2s, transform 0.15s; z-index: 1; }
 .mic-btn:active { transform: scale(0.92); }
 .mic-btn.recording { background: var(--danger); }
-.mic-btn svg { width: 28px; height: 28px; }
-.mic-hint { font-size: 13px; color: var(--muted); text-align: center; line-height: 1.4; }
+.mic-btn svg { width: 26px; height: 26px; }
+.mic-hint { font-size: 12px; color: var(--muted); text-align: center; }
 .mic-hint.recording { color: var(--danger); font-weight: 500; }
 
-/* Transcript */
-.transcript-wrap { position: relative; }
-.transcript-box { width: 100%; padding: 12px 13px; border-radius: var(--radius); border: 1px dashed var(--cream); background: white; font-size: 14px; color: var(--ink); line-height: 1.65; min-height: 68px; font-family: 'DM Sans', sans-serif; }
+.transcript-box { width: 100%; padding: 11px 12px; border-radius: var(--radius); border: 1px dashed var(--cream); background: white; font-size: 14px; color: var(--ink); line-height: 1.65; min-height: 60px; font-family: 'DM Sans', sans-serif; }
 .transcript-box:focus { outline: none; border-color: var(--gold-light); border-style: solid; }
-.lang-pill { display: inline-block; font-size: 11px; padding: 2px 10px; border-radius: 99px; background: var(--warn-bg); color: var(--warn); margin-top: 6px; }
+.lang-pill { display: inline-block; font-size: 11px; padding: 2px 9px; border-radius: 99px; background: var(--warn-bg); color: var(--warn); margin-top: 5px; }
 
-/* Notice */
-.notice { display: flex; gap: 8px; padding: 10px 12px; border-radius: var(--radius-sm); font-size: 12px; line-height: 1.55; margin-bottom: 12px; }
-.notice.info { background: var(--info-bg); color: var(--info); }
-.notice.warn { background: var(--warn-bg); color: var(--warn); }
+/* ═══ SIMULTANEOUS TRANSLATION PANEL ═══ */
+.live-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+.live-title { font-size: 15px; font-weight: 500; color: var(--ink); }
+.live-rec-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--muted); flex-shrink: 0; }
+.live-rec-dot.blink { background: var(--danger); animation: blink 1s infinite; }
 
-footer { padding: 12px 20px; border-top: 1px solid var(--cream); text-align: center; font-size: 11px; color: var(--muted); }
+/* Split view */
+.live-split { display: flex; flex-direction: column; gap: 10px; }
+.live-pane { border-radius: var(--radius); border: 1px solid var(--cream); background: white; overflow: hidden; }
+.live-pane-label { font-size: 10px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); padding: 8px 14px 4px; border-bottom: 1px solid var(--cream); display: flex; align-items: center; justify-content: space-between; }
+.live-pane-body { padding: 12px 14px; min-height: 80px; max-height: 180px; overflow-y: auto; }
+.live-text { font-size: 16px; line-height: 1.7; color: var(--ink); white-space: pre-wrap; }
+.live-text.interim { color: var(--muted); }
+.live-text.empty { color: var(--muted); font-style: italic; font-size: 13px; }
+.live-translation { font-size: 18px; line-height: 1.65; color: var(--ink); font-weight: 400; white-space: pre-wrap; }
+.live-translation.empty { color: var(--muted); font-style: italic; font-size: 13px; font-weight: 400; }
+.translating-badge { font-size: 11px; padding: 1px 8px; border-radius: 99px; background: var(--gold-light); color: var(--warn); display: none; }
+.translating-badge.show { display: inline-block; }
+
+/* History */
+.live-history { margin-top: 10px; }
+.live-history-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 6px; }
+.history-list { display: flex; flex-direction: column; gap: 6px; max-height: 200px; overflow-y: auto; }
+.history-item { padding: 10px 12px; border-radius: var(--radius-sm); background: white; border: 1px solid var(--cream); }
+.history-orig { font-size: 12px; color: var(--muted); margin-bottom: 3px; line-height: 1.5; }
+.history-trans { font-size: 14px; color: var(--ink); line-height: 1.5; }
+
+/* Live controls */
+.live-controls { display: flex; gap: 8px; margin-top: 12px; align-items: center; }
+.live-mic-btn { width: 52px; height: 52px; border-radius: 50%; border: none; background: var(--ink); cursor: pointer; display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: background 0.2s, transform 0.15s; }
+.live-mic-btn:active { transform: scale(0.92); }
+.live-mic-btn.recording { background: var(--danger); }
+.live-mic-btn svg { width: 22px; height: 22px; }
+.live-status { font-size: 12px; color: var(--muted); flex: 1; }
+.live-clear-btn { font-size: 12px; padding: 6px 14px; border-radius: 99px; border: 1px solid var(--cream); background: white; color: var(--muted); cursor: pointer; }
+
+footer { padding: 10px 20px; border-top: 1px solid var(--cream); text-align: center; font-size: 11px; color: var(--muted); }
 </style>
 </head>
 <body>
@@ -155,6 +166,7 @@ footer { padding: 12px 20px; border-top: 1px solid var(--cream); text-align: cen
   <div class="tabs">
     <button class="tab active" onclick="switchTab('text',this)">テキスト翻訳</button>
     <button class="tab" onclick="switchTab('voice',this)">音声録音</button>
+    <button class="tab" onclick="switchTab('live',this)">🔴 同時翻訳</button>
   </div>
 
   <div class="panels">
@@ -163,13 +175,13 @@ footer { padding: 12px 20px; border-top: 1px solid var(--cream); text-align: cen
     <div id="text-panel" class="panel active">
       <div class="lang-bar">
         <label>From</label>
-        <select class="lang-select" id="src-lang" onchange="onSrcChange()">
+        <select class="lang-select" id="src-lang">
           <option value="auto">自動検出</option>
           <option value="ja">日本語</option>
           <option value="en">英語</option>
           <option value="tl">タガログ語</option>
         </select>
-        <button class="swap-btn" onclick="swapLangs()" title="入れ替え">⇄</button>
+        <button class="swap-btn" onclick="swapLangs()">⇄</button>
         <label>To</label>
         <select class="lang-select" id="tgt-lang">
           <option value="ja">日本語</option>
@@ -177,16 +189,14 @@ footer { padding: 12px 20px; border-top: 1px solid var(--cream); text-align: cen
           <option value="tl">タガログ語</option>
         </select>
       </div>
-      <div style="margin-bottom:12px"><span class="mix-tag">混在テキスト対応</span></div>
-
+      <div style="margin-bottom:10px"><span class="mix-tag">混在テキスト対応</span></div>
       <div class="sect-label">入力テキスト</div>
-      <textarea id="input-text" rows="5" placeholder="ここに入力。日本語・英語・タガログ語の混在も可能です。&#10;&#10;例: 今日はmagandang arawですね。How are you?"></textarea>
+      <textarea id="input-text" rows="5" placeholder="ここに入力。日本語・英語・タガログ語の混在も可能です。"></textarea>
       <div class="action-row">
         <button class="btn btn-primary" onclick="translateText()">翻訳する</button>
         <button class="btn btn-ghost" onclick="clearText()">クリア</button>
       </div>
       <div class="status-line" id="text-status"></div>
-
       <div class="output-card">
         <div class="output-card-label">翻訳結果</div>
         <button class="copy-btn" onclick="copyResult('text-result')">コピー</button>
@@ -196,19 +206,15 @@ footer { padding: 12px 20px; border-top: 1px solid var(--cream); text-align: cen
 
     <!-- ═══ VOICE PANEL ═══ -->
     <div id="voice-panel" class="panel">
-
-      <div class="notice info">
-        <span>ℹ</span>
-        <div>iOSのSafari音声認識を使用します。マイクを許可し、ゆっくり話してください。日本語・英語・タガログ語に対応しています。</div>
+      <div class="notice info" style="display:flex;gap:8px;padding:9px 12px;border-radius:var(--radius-sm);font-size:12px;line-height:1.55;margin-bottom:12px;background:var(--info-bg);color:var(--info);">
+        <span>ℹ</span><div>iOSのSafari音声認識を使用します。マイクを許可し、ゆっくり話してください。</div>
       </div>
-
-      <div class="lang-bar" style="margin-bottom:6px">
+      <div class="lang-bar" style="margin-bottom:10px">
         <label>認識言語</label>
-        <select class="lang-select" id="voice-src-lang" onchange="updateRecLang()">
+        <select class="lang-select" id="voice-src-lang">
           <option value="ja-JP">日本語</option>
           <option value="en-US">英語</option>
           <option value="fil-PH">タガログ語</option>
-          <option value="ja-JP" data-mixed="true">自動（日本語ベース）</option>
         </select>
         <span style="color:var(--muted);font-size:13px">→</span>
         <label>翻訳先</label>
@@ -218,71 +224,108 @@ footer { padding: 12px 20px; border-top: 1px solid var(--cream); text-align: cen
           <option value="tl">タガログ語</option>
         </select>
       </div>
-
-      <!-- Rec status banner -->
       <div class="rec-banner idle" id="rec-banner">
         <span class="rec-dot" id="rec-dot"></span>
         <span id="rec-banner-text">マイクボタンを押して録音開始</span>
       </div>
-
-      <!-- ─── AUDIO MONITOR ─── -->
       <div class="monitor-card">
         <div class="monitor-header">
           <span class="monitor-title">マイクモニター</span>
           <span class="monitor-badge off" id="monitor-badge">待機中</span>
         </div>
-        <div class="vu-track">
-          <div class="vu-fill" id="vu-fill"></div>
-          <div class="vu-peak" id="vu-peak" style="left:0%"></div>
-        </div>
-        <div class="waveform-wrap">
-          <canvas id="waveCanvas"></canvas>
-        </div>
+        <div class="vu-track"><div class="vu-fill" id="vu-fill"></div><div class="vu-peak" id="vu-peak" style="left:0%"></div></div>
+        <div class="waveform-wrap"><canvas id="waveCanvas"></canvas></div>
         <div class="monitor-stats">
           <div class="monitor-stat">音量 <span id="stat-vol">—</span></div>
           <div class="monitor-stat">ピーク <span id="stat-peak">—</span></div>
           <div class="monitor-stat">経過 <span id="stat-time">00:00</span></div>
         </div>
       </div>
-
-      <!-- Mic button -->
       <div class="mic-center">
         <div class="mic-outer">
           <div class="mic-ring" id="mic-ring"></div>
           <button class="mic-btn" id="mic-btn" onclick="toggleRecording()">
-            <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" id="mic-svg">
-              <rect x="9" y="1" width="10" height="15" rx="5" fill="white"/>
-              <path d="M5 13a9 9 0 0 0 18 0" stroke="white" stroke-width="2" stroke-linecap="round" fill="none"/>
-              <line x1="14" y1="22" x2="14" y2="27" stroke="white" stroke-width="2" stroke-linecap="round"/>
-              <line x1="9" y1="27" x2="19" y2="27" stroke="white" stroke-width="2" stroke-linecap="round"/>
-            </svg>
-            <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" id="stop-svg" style="display:none">
-              <rect x="7" y="7" width="14" height="14" rx="3" fill="white"/>
-            </svg>
+            <svg viewBox="0 0 28 28" fill="none" id="mic-svg"><rect x="9" y="1" width="10" height="15" rx="5" fill="white"/><path d="M5 13a9 9 0 0 0 18 0" stroke="white" stroke-width="2" stroke-linecap="round" fill="none"/><line x1="14" y1="22" x2="14" y2="27" stroke="white" stroke-width="2" stroke-linecap="round"/><line x1="9" y1="27" x2="19" y2="27" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+            <svg viewBox="0 0 28 28" fill="none" id="stop-svg" style="display:none"><rect x="7" y="7" width="14" height="14" rx="3" fill="white"/></svg>
           </button>
         </div>
         <div class="mic-hint" id="mic-hint">タップして録音開始</div>
       </div>
-
-      <!-- Transcript (editable) -->
-      <div class="sect-label">文字起こし結果 <span style="font-weight:400;text-transform:none;letter-spacing:0">(編集可能)</span></div>
-      <div class="transcript-wrap">
-        <div class="transcript-box" id="transcript-box" contenteditable="true" role="textbox" aria-multiline="true">
-          <span style="color:var(--muted);font-style:italic">録音すると文字起こし結果がここに表示されます。手動入力も可能です。</span>
-        </div>
-      </div>
+      <div class="sect-label">文字起こし結果 <span style="font-weight:400;text-transform:none;letter-spacing:0">(編集可)</span></div>
+      <div class="transcript-box" id="transcript-box" contenteditable="true"><span style="color:var(--muted);font-style:italic">録音すると文字起こし結果がここに表示されます</span></div>
       <div id="lang-pill" style="display:none" class="lang-pill"></div>
-
       <div class="action-row" style="margin-top:10px">
         <button class="btn btn-primary" onclick="translateVoice()">翻訳する</button>
         <button class="btn btn-ghost" onclick="clearVoice()">クリア</button>
       </div>
       <div class="status-line" id="voice-status"></div>
-
       <div class="output-card">
         <div class="output-card-label">翻訳結果</div>
         <button class="copy-btn" onclick="copyResult('voice-result')">コピー</button>
         <div class="output-text empty" id="voice-result">翻訳結果がここに表示されます</div>
+      </div>
+    </div>
+
+    <!-- ═══ LIVE SIMULTANEOUS TRANSLATION PANEL ═══ -->
+    <div id="live-panel" class="panel">
+
+      <div class="lang-bar" style="margin-bottom:12px">
+        <label>認識</label>
+        <select class="lang-select" id="live-src-lang">
+          <option value="ja-JP">日本語</option>
+          <option value="en-US">英語</option>
+          <option value="fil-PH">タガログ語</option>
+        </select>
+        <span style="color:var(--muted);font-size:13px">→</span>
+        <label>翻訳先</label>
+        <select class="lang-select" id="live-tgt-lang">
+          <option value="ja">日本語</option>
+          <option value="en">英語</option>
+          <option value="tl">タガログ語</option>
+        </select>
+      </div>
+
+      <!-- Live split view -->
+      <div class="live-split">
+        <!-- Original -->
+        <div class="live-pane">
+          <div class="live-pane-label">
+            <span>原文</span>
+            <div style="display:flex;align-items:center;gap:6px">
+              <span class="live-rec-dot" id="live-rec-dot"></span>
+              <span id="live-rec-label" style="font-size:11px;color:var(--muted)">待機中</span>
+            </div>
+          </div>
+          <div class="live-pane-body">
+            <div class="live-text empty" id="live-original">マイクボタンを押して同時翻訳を開始</div>
+          </div>
+        </div>
+        <!-- Translation -->
+        <div class="live-pane" style="border-color:var(--gold-light)">
+          <div class="live-pane-label" style="background:linear-gradient(to right,#fff8e8,white)">
+            <span style="color:var(--warn)">翻訳</span>
+            <span class="translating-badge" id="translating-badge">翻訳中...</span>
+          </div>
+          <div class="live-pane-body">
+            <div class="live-translation empty" id="live-translation">翻訳結果がここに表示されます</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <div class="live-controls">
+        <button class="live-mic-btn" id="live-mic-btn" onclick="toggleLive()">
+          <svg viewBox="0 0 28 28" fill="none" id="live-mic-svg"><rect x="9" y="1" width="10" height="15" rx="5" fill="white"/><path d="M5 13a9 9 0 0 0 18 0" stroke="white" stroke-width="2" stroke-linecap="round" fill="none"/><line x1="14" y1="22" x2="14" y2="27" stroke="white" stroke-width="2" stroke-linecap="round"/><line x1="9" y1="27" x2="19" y2="27" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+          <svg viewBox="0 0 28 28" fill="none" id="live-stop-svg" style="display:none"><rect x="7" y="7" width="14" height="14" rx="3" fill="white"/></svg>
+        </button>
+        <div class="live-status" id="live-status">タップして同時翻訳を開始</div>
+        <button class="live-clear-btn" onclick="clearLive()">クリア</button>
+      </div>
+
+      <!-- History -->
+      <div class="live-history" id="live-history" style="display:none">
+        <div class="live-history-label">翻訳履歴</div>
+        <div class="history-list" id="history-list"></div>
       </div>
     </div>
 
@@ -297,18 +340,13 @@ function switchTab(tab, el) {
   document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
   el.classList.add('active');
   document.getElementById(tab + '-panel').classList.add('active');
+  if (tab !== 'live' && liveIsRunning) stopLive();
 }
 
 // ─── Lang helpers ───
 const LANG_NAMES = { ja:'日本語', en:'英語', tl:'タガログ語', auto:'自動検出' };
-const GT_CODES   = { ja:'ja', en:'en', tl:'tl', auto:'auto' };
-
 function getLangName(c) { return LANG_NAMES[c] || c; }
 
-function onSrcChange() {
-  const v = document.getElementById('src-lang').value;
-  document.getElementById('swap-arrow').style.display = v === 'auto' ? 'none' : '';
-}
 function swapLangs() {
   const src = document.getElementById('src-lang');
   const tgt = document.getElementById('tgt-lang');
@@ -316,336 +354,381 @@ function swapLangs() {
   const tmp = src.value; src.value = tgt.value; tgt.value = tmp;
 }
 
-// ─── Google Translate (free unofficial endpoint) ───
+// ─── Google Translate (MyMemory free API) ───
 async function googleTranslate(text, srcLang, tgtLang) {
-  // Use MyMemory free API — no key required, 5000 chars/day free
   const sl = srcLang === 'auto' ? 'autodetect' : srcLang;
-  const langPair = sl + '|' + tgtLang;
   const url = 'https://api.mymemory.translated.net/get?q=' +
-    encodeURIComponent(text) + '&langpair=' + encodeURIComponent(langPair);
+    encodeURIComponent(text.slice(0, 500)) + '&langpair=' + encodeURIComponent(sl + '|' + tgtLang);
   const resp = await fetch(url);
   if (!resp.ok) throw new Error('翻訳サービスに接続できません');
   const data = await resp.json();
-  if (data.responseStatus !== 200 && data.responseStatus !== '200') {
-    throw new Error(data.responseDetails || '翻訳エラー');
-  }
+  if (data.responseStatus !== 200 && data.responseStatus !== '200') throw new Error(data.responseDetails || '翻訳エラー');
   return data.responseData.translatedText;
 }
 
 function setStatus(id, html) { document.getElementById(id).innerHTML = html; }
 
+// ─── Text translation ───
 async function translateText() {
   const input = document.getElementById('input-text').value.trim();
   if (!input) return;
   const src = document.getElementById('src-lang').value;
   const tgt = document.getElementById('tgt-lang').value;
   const resultEl = document.getElementById('text-result');
-
   setStatus('text-status', '<span class="spinner"></span>翻訳中...');
   resultEl.classList.remove('empty'); resultEl.textContent = '';
-
   try {
-    const result = await googleTranslate(input, src, tgt);
-    resultEl.textContent = result;
+    resultEl.textContent = await googleTranslate(input, src, tgt);
     setStatus('text-status', '✓ 完了');
   } catch(e) {
-    resultEl.classList.add('empty');
-    resultEl.textContent = 'エラーが発生しました。';
+    resultEl.classList.add('empty'); resultEl.textContent = 'エラーが発生しました。';
     setStatus('text-status', '⚠ ' + e.message);
   }
 }
-
 function clearText() {
   document.getElementById('input-text').value = '';
   const r = document.getElementById('text-result');
   r.classList.add('empty'); r.textContent = '翻訳結果がここに表示されます';
   setStatus('text-status', '');
 }
-
 function copyResult(id) {
   const text = document.getElementById(id).textContent.trim();
-  if (!text || text === '翻訳結果がここに表示されます') return;
-  navigator.clipboard?.writeText(text).catch(() => {});
+  if (!text || text.includes('翻訳結果がここに')) return;
+  navigator.clipboard?.writeText(text).catch(()=>{});
 }
 
-// ─── Audio Monitor ───
-let audioCtx = null, analyser = null, micStream = null;
-let monitorRAF = null, waveRAF = null;
-let peakLevel = 0, peakDecay = 0;
-let recStartTime = null, timerInterval = null;
+// ─── Audio Monitor (shared) ───
+let audioCtx=null, analyser=null, micStream=null;
+let monitorRAF=null, waveRAF=null, peakLevel=0, peakDecay=0;
+let recStartTime=null, timerInterval=null;
 
 const canvas = document.getElementById('waveCanvas');
-const ctx2d   = canvas.getContext('2d');
-
+const ctx2d = canvas.getContext('2d');
 function resizeCanvas() {
-  const dpr = window.devicePixelRatio || 1;
-  canvas.width  = canvas.offsetWidth  * dpr;
-  canvas.height = canvas.offsetHeight * dpr;
-  ctx2d.setTransform(dpr, 0, 0, dpr, 0, 0);
+  const dpr = window.devicePixelRatio||1;
+  canvas.width = canvas.offsetWidth*dpr; canvas.height = canvas.offsetHeight*dpr;
+  ctx2d.setTransform(dpr,0,0,dpr,0,0);
 }
-resizeCanvas();
-window.addEventListener('resize', resizeCanvas);
+resizeCanvas(); window.addEventListener('resize', resizeCanvas);
 
 function startMonitor(stream) {
-  audioCtx  = new (window.AudioContext || window.webkitAudioContext)();
-  analyser  = audioCtx.createAnalyser();
-  analyser.fftSize = 1024;
-  analyser.smoothingTimeConstant = 0.8;
+  audioCtx = new (window.AudioContext||window.webkitAudioContext)();
+  analyser = audioCtx.createAnalyser();
+  analyser.fftSize = 1024; analyser.smoothingTimeConstant = 0.8;
   audioCtx.createMediaStreamSource(stream).connect(analyser);
-  peakLevel = 0; peakDecay = 0;
-  runVU(); runWave();
-  setBadge('on', '録音中');
+  peakLevel=0; peakDecay=0; runVU(); runWave(); setBadge('on','録音中');
 }
-
 function stopMonitor() {
   if (monitorRAF) cancelAnimationFrame(monitorRAF);
-  if (waveRAF)    cancelAnimationFrame(waveRAF);
-  if (audioCtx)   { audioCtx.close(); audioCtx = null; analyser = null; }
-  document.getElementById('vu-fill').style.width = '0%';
-  document.getElementById('vu-peak').style.left  = '0%';
-  document.getElementById('stat-vol').textContent  = '—';
-  document.getElementById('stat-peak').textContent = '—';
-  setBadge('ok', '完了');
-  clearWave();
+  if (waveRAF) cancelAnimationFrame(waveRAF);
+  if (audioCtx) { audioCtx.close(); audioCtx=null; analyser=null; }
+  document.getElementById('vu-fill').style.width='0%';
+  document.getElementById('vu-peak').style.left='0%';
+  document.getElementById('stat-vol').textContent='—';
+  document.getElementById('stat-peak').textContent='—';
+  setBadge('ok','完了'); clearWave();
 }
-
-function setBadge(state, text) {
-  const b = document.getElementById('monitor-badge');
-  b.className = 'monitor-badge ' + state;
-  b.textContent = text;
+function setBadge(state,text) {
+  const b=document.getElementById('monitor-badge');
+  b.className='monitor-badge '+state; b.textContent=text;
 }
-
 function runVU() {
   if (!analyser) return;
-  const buf = new Uint8Array(analyser.frequencyBinCount);
+  const buf=new Uint8Array(analyser.frequencyBinCount);
   analyser.getByteFrequencyData(buf);
-  const rms   = Math.sqrt(buf.reduce((s,v) => s + v*v, 0) / buf.length);
-  const level = Math.min(rms / 75, 1);
-  if (level > peakLevel) { peakLevel = level; peakDecay = 0; }
-  else { peakDecay += 0.004; peakLevel = Math.max(0, peakLevel - peakDecay); }
-  document.getElementById('vu-fill').style.width = (level * 100).toFixed(1) + '%';
-  document.getElementById('vu-peak').style.left  = (peakLevel * 100).toFixed(1) + '%';
-  document.getElementById('stat-vol').textContent  = Math.round(level * 100) + '%';
-  document.getElementById('stat-peak').textContent = Math.round(peakLevel * 100) + '%';
-  monitorRAF = requestAnimationFrame(runVU);
+  const rms=Math.sqrt(buf.reduce((s,v)=>s+v*v,0)/buf.length);
+  const level=Math.min(rms/75,1);
+  if (level>peakLevel){peakLevel=level;peakDecay=0;}
+  else{peakDecay+=0.004;peakLevel=Math.max(0,peakLevel-peakDecay);}
+  document.getElementById('vu-fill').style.width=(level*100).toFixed(1)+'%';
+  document.getElementById('vu-peak').style.left=(peakLevel*100).toFixed(1)+'%';
+  document.getElementById('stat-vol').textContent=Math.round(level*100)+'%';
+  document.getElementById('stat-peak').textContent=Math.round(peakLevel*100)+'%';
+  monitorRAF=requestAnimationFrame(runVU);
 }
-
 function runWave() {
   if (!analyser) return;
-  const w = canvas.offsetWidth, h = canvas.offsetHeight;
-  const buf = new Uint8Array(analyser.fftSize);
+  const w=canvas.offsetWidth,h=canvas.offsetHeight;
+  const buf=new Uint8Array(analyser.fftSize);
   analyser.getByteTimeDomainData(buf);
-  ctx2d.clearRect(0, 0, w, h);
-  ctx2d.beginPath();
-  ctx2d.strokeStyle = '#c9a84c';
-  ctx2d.lineWidth = 1.5;
-  const step = w / buf.length;
-  for (let i = 0; i < buf.length; i++) {
-    const x = i * step;
-    const y = ((buf[i] / 128) - 1) * (h * 0.42) + h / 2;
-    i === 0 ? ctx2d.moveTo(x, y) : ctx2d.lineTo(x, y);
+  ctx2d.clearRect(0,0,w,h);
+  ctx2d.beginPath(); ctx2d.strokeStyle='#c9a84c'; ctx2d.lineWidth=1.5;
+  const step=w/buf.length;
+  for(let i=0;i<buf.length;i++){
+    const x=i*step,y=((buf[i]/128)-1)*(h*0.42)+h/2;
+    i===0?ctx2d.moveTo(x,y):ctx2d.lineTo(x,y);
   }
-  ctx2d.stroke();
-  waveRAF = requestAnimationFrame(runWave);
+  ctx2d.stroke(); waveRAF=requestAnimationFrame(runWave);
 }
-
 function clearWave() {
-  const w = canvas.offsetWidth, h = canvas.offsetHeight;
-  ctx2d.clearRect(0, 0, w, h);
-  ctx2d.beginPath();
-  ctx2d.strokeStyle = '#ede9e0';
-  ctx2d.lineWidth = 1;
-  ctx2d.moveTo(0, h/2); ctx2d.lineTo(w, h/2);
-  ctx2d.stroke();
+  const w=canvas.offsetWidth,h=canvas.offsetHeight;
+  ctx2d.clearRect(0,0,w,h);
+  ctx2d.beginPath(); ctx2d.strokeStyle='#ede9e0'; ctx2d.lineWidth=1;
+  ctx2d.moveTo(0,h/2); ctx2d.lineTo(w,h/2); ctx2d.stroke();
 }
 clearWave();
-
 function startTimer() {
-  recStartTime = Date.now();
-  timerInterval = setInterval(() => {
-    const s = Math.floor((Date.now() - recStartTime) / 1000);
-    document.getElementById('stat-time').textContent =
-      String(Math.floor(s/60)).padStart(2,'0') + ':' + String(s%60).padStart(2,'0');
-  }, 500);
+  recStartTime=Date.now();
+  timerInterval=setInterval(()=>{
+    const s=Math.floor((Date.now()-recStartTime)/1000);
+    document.getElementById('stat-time').textContent=
+      String(Math.floor(s/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0');
+  },500);
 }
-function stopTimer() {
-  clearInterval(timerInterval);
-  document.getElementById('stat-time').textContent = '00:00';
-}
+function stopTimer() { clearInterval(timerInterval); document.getElementById('stat-time').textContent='00:00'; }
 
-// ─── Recording with Web Speech API ───
-let isRecording = false;
-let recognition = null;
-let transcriptFinal = '';
+// ─── Voice Recording (standard tab) ───
+let isRecording=false, recognition=null, transcriptFinal='';
 
-function updateRecLang() {
-  if (recognition) { recognition.lang = document.getElementById('voice-src-lang').value; }
-}
-
-function setRecState(state, msg) {
-  const banner = document.getElementById('rec-banner');
-  const dot    = document.getElementById('rec-dot');
-  banner.className = 'rec-banner ' + state;
-  dot.className    = 'rec-dot' + (state === 'recording' ? ' blink' : '');
-  document.getElementById('rec-banner-text').textContent = msg;
-
-  const ring    = document.getElementById('mic-ring');
-  const btn     = document.getElementById('mic-btn');
-  const hint    = document.getElementById('mic-hint');
-  const micSvg  = document.getElementById('mic-svg');
-  const stopSvg = document.getElementById('stop-svg');
-
-  if (state === 'recording') {
-    ring.className = 'mic-ring active';
-    btn.className  = 'mic-btn recording';
-    hint.textContent = 'タップして停止';
-    hint.className = 'mic-hint recording';
-    micSvg.style.display  = 'none';
-    stopSvg.style.display = '';
+function setRecState(state,msg) {
+  const banner=document.getElementById('rec-banner'),dot=document.getElementById('rec-dot');
+  banner.className='rec-banner '+state;
+  dot.className='rec-dot'+(state==='recording'?' blink':'');
+  document.getElementById('rec-banner-text').textContent=msg;
+  const ring=document.getElementById('mic-ring'),btn=document.getElementById('mic-btn');
+  const hint=document.getElementById('mic-hint');
+  const micSvg=document.getElementById('mic-svg'),stopSvg=document.getElementById('stop-svg');
+  if(state==='recording'){
+    ring.className='mic-ring active'; btn.className='mic-btn recording';
+    hint.textContent='タップして停止'; hint.className='mic-hint recording';
+    micSvg.style.display='none'; stopSvg.style.display='';
   } else {
-    ring.className = 'mic-ring';
-    btn.className  = 'mic-btn';
-    micSvg.style.display  = '';
-    stopSvg.style.display = 'none';
-    hint.className = 'mic-hint';
-    hint.textContent = state === 'done'
-      ? '録音完了 — 翻訳ボタンを押してください'
-      : 'タップして録音開始';
+    ring.className='mic-ring'; btn.className='mic-btn';
+    micSvg.style.display=''; stopSvg.style.display='none';
+    hint.className='mic-hint';
+    hint.textContent=state==='done'?'録音完了 — 翻訳ボタンを押してください':'タップして録音開始';
   }
 }
-
-function toggleRecording() {
-  if (!isRecording) startRecording(); else stopRecording();
-}
-
+function toggleRecording() { if(!isRecording) startRecording(); else stopRecording(); }
 async function startRecording() {
-  const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
-  if (!SR) {
-    setRecState('error', '音声認識非対応。Safari最新版をお使いください。');
-    return;
-  }
-
-  // Request mic for monitor (separate from SR)
-  try {
-    const monitorStream = await navigator.mediaDevices.getUserMedia({ audio: true });
-    micStream = monitorStream;
-    startMonitor(monitorStream);
-  } catch(e) {
-    // Monitor unavailable – continue without it
-  }
-
-  recognition = new SR();
-  recognition.lang = document.getElementById('voice-src-lang').value;
-  recognition.continuous      = true;
-  recognition.interimResults  = true;
-  recognition.maxAlternatives = 1;
-
-  recognition.onstart = () => {
-    isRecording = true;
-    startTimer();
-    setRecState('recording', '録音中 — 話しかけてください');
-  };
-
-  recognition.onresult = (e) => {
-    let interim = '';
-    let final   = '';
-    for (let i = e.resultIndex; i < e.results.length; i++) {
-      const t = e.results[i][0].transcript;
-      if (e.results[i].isFinal) final += t;
-      else interim += t;
+  const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+  if(!SR){setRecState('error','音声認識非対応。Safari最新版をお使いください。');return;}
+  try{const s=await navigator.mediaDevices.getUserMedia({audio:true});micStream=s;startMonitor(s);}catch(e){}
+  recognition=new SR();
+  recognition.lang=document.getElementById('voice-src-lang').value;
+  recognition.continuous=true; recognition.interimResults=true; recognition.maxAlternatives=1;
+  recognition.onstart=()=>{isRecording=true;startTimer();setRecState('recording','録音中 — 話しかけてください');};
+  recognition.onresult=(e)=>{
+    let interim='',final='';
+    for(let i=e.resultIndex;i<e.results.length;i++){
+      const t=e.results[i][0].transcript;
+      if(e.results[i].isFinal)final+=t;else interim+=t;
     }
-    if (final) transcriptFinal += final;
-    const box = document.getElementById('transcript-box');
-    box.innerHTML = '';
-    const full = transcriptFinal + interim;
-    box.textContent = full || '';
-    if (full) detectLang(full);
+    if(final)transcriptFinal+=final;
+    const box=document.getElementById('transcript-box');
+    box.innerHTML=''; box.textContent=(transcriptFinal+interim)||'';
+    if(transcriptFinal+interim)detectLang(transcriptFinal+interim);
   };
-
-  recognition.onerror = (e) => {
-    isRecording = false;
-    stopTimer();
-    if (micStream) { micStream.getTracks().forEach(t => t.stop()); micStream = null; }
+  recognition.onerror=(e)=>{
+    isRecording=false;stopTimer();
+    if(micStream){micStream.getTracks().forEach(t=>t.stop());micStream=null;}
     stopMonitor();
-    const msgs = {
-      'not-allowed': 'マイクが拒否されました。設定 > Safari > マイク を許可してください。',
-      'no-speech':   '音声が検出されませんでした。もう一度お試しください。',
-      'network':     'ネットワークエラーが発生しました。',
-      'aborted':     '録音が中断されました。'
-    };
-    setRecState('error', msgs[e.error] || 'エラー: ' + e.error);
-    setBadge('off', 'エラー');
+    const msgs={'not-allowed':'マイクが拒否されました。設定 > Safari > マイク を許可してください。','no-speech':'音声が検出されませんでした。','network':'ネットワークエラー。','aborted':'録音が中断されました。'};
+    setRecState('error',msgs[e.error]||'エラー: '+e.error);setBadge('off','エラー');
   };
-
-  recognition.onend = () => {
-    if (isRecording) {
-      // iOS SR stops automatically — try to restart if user hasn't stopped
-      try { recognition.start(); } catch(e) { /* ignore */ }
-    }
-  };
-
+  recognition.onend=()=>{if(isRecording){try{recognition.start();}catch(e){}}};
   recognition.start();
 }
-
 function stopRecording() {
-  isRecording = false;
-  if (recognition) { try { recognition.stop(); } catch(e){} recognition = null; }
-  if (micStream)   { micStream.getTracks().forEach(t => t.stop()); micStream = null; }
-  stopMonitor();
-  stopTimer();
-  setRecState('done', '録音完了 — 翻訳ボタンを押してください');
+  isRecording=false;
+  if(recognition){try{recognition.stop();}catch(e){}recognition=null;}
+  if(micStream){micStream.getTracks().forEach(t=>t.stop());micStream=null;}
+  stopMonitor();stopTimer();setRecState('done','録音完了 — 翻訳ボタンを押してください');
 }
-
 function detectLang(text) {
-  const pill  = document.getElementById('lang-pill');
-  const hasJa = /[\u3040-\u30ff\u4e00-\u9fff]/.test(text);
-  const hasTl = /\b(ako|ikaw|siya|kami|ito|ng|sa|ang|mga|po|opo|maganda|kumusta|namin|hindi|oo)\b/i.test(text);
-  const hasEn = /\b(the|is|are|was|were|have|has|I|you|he|she|we|they|this|that)\b/.test(text);
-  const langs = [];
-  if (hasJa) langs.push('日本語');
-  if (hasTl) langs.push('タガログ語');
-  if (hasEn) langs.push('英語');
-  if (langs.length) {
-    pill.style.display = 'inline-block';
-    pill.textContent   = '検出: ' + langs.join(' + ');
-  } else {
-    pill.style.display = 'none';
-  }
+  const pill=document.getElementById('lang-pill');
+  const hasJa=/[\u3040-\u30ff\u4e00-\u9fff]/.test(text);
+  const hasTl=/\b(ako|ikaw|siya|kami|ito|ng|sa|ang|mga|po|opo|maganda|kumusta|namin|hindi|oo)\b/i.test(text);
+  const hasEn=/\b(the|is|are|was|were|have|has|I|you|he|she|we|they|this|that)\b/.test(text);
+  const langs=[];
+  if(hasJa)langs.push('日本語');if(hasTl)langs.push('タガログ語');if(hasEn)langs.push('英語');
+  if(langs.length){pill.style.display='inline-block';pill.textContent='検出: '+langs.join(' + ');}
+  else pill.style.display='none';
 }
-
 async function translateVoice() {
-  const box   = document.getElementById('transcript-box');
-  const input = box.textContent.trim();
-  if (!input) { setStatus('voice-status', '⚠ 文字起こしテキストがありません'); return; }
-  const tgt = document.getElementById('voice-tgt-lang').value;
+  const box=document.getElementById('transcript-box');
+  const input=box.textContent.trim();
+  if(!input){setStatus('voice-status','⚠ 文字起こしテキストがありません');return;}
+  const tgt=document.getElementById('voice-tgt-lang').value;
+  const resultEl=document.getElementById('voice-result');
+  setStatus('voice-status','<span class="spinner"></span>翻訳中...');
+  resultEl.classList.remove('empty');resultEl.textContent='';
+  try{resultEl.textContent=await googleTranslate(input,'auto',tgt);setStatus('voice-status','✓ 完了');}
+  catch(e){resultEl.classList.add('empty');resultEl.textContent='エラーが発生しました。';setStatus('voice-status','⚠ '+e.message);}
+}
+function clearVoice() {
+  transcriptFinal='';
+  const box=document.getElementById('transcript-box');
+  box.innerHTML='<span style="color:var(--muted);font-style:italic">録音すると文字起こし結果がここに表示されます</span>';
+  document.getElementById('lang-pill').style.display='none';
+  const r=document.getElementById('voice-result');
+  r.classList.add('empty');r.textContent='翻訳結果がここに表示されます';
+  setStatus('voice-status','');setRecState('idle','マイクボタンを押して録音開始');
+  setBadge('off','待機中');clearWave();document.getElementById('stat-time').textContent='00:00';
+}
 
-  setStatus('voice-status', '<span class="spinner"></span>翻訳中...');
-  const resultEl = document.getElementById('voice-result');
-  resultEl.classList.remove('empty'); resultEl.textContent = '';
+// ═══ LIVE SIMULTANEOUS TRANSLATION ═══
+let liveIsRunning=false, liveRecognition=null;
+let liveCurrentFinal='', liveInterim='';
+let translateTimer=null, lastTranslatedText='';
+const TRANSLATE_DELAY=1200; // ms after last speech to auto-translate
+const historyItems=[];
 
-  try {
-    const result = await googleTranslate(input, 'auto', tgt);
-    resultEl.textContent = result;
-    setStatus('voice-status', '✓ 完了');
-  } catch(e) {
-    resultEl.classList.add('empty');
-    resultEl.textContent = 'エラーが発生しました。';
-    setStatus('voice-status', '⚠ ' + e.message);
+function toggleLive() { if(!liveIsRunning) startLive(); else stopLive(); }
+
+async function startLive() {
+  const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+  if(!SR){
+    document.getElementById('live-status').textContent='音声認識非対応。Safari最新版をお使いください。';
+    return;
+  }
+  liveRecognition=new SR();
+  liveRecognition.lang=document.getElementById('live-src-lang').value;
+  liveRecognition.continuous=true;
+  liveRecognition.interimResults=true;
+  liveRecognition.maxAlternatives=1;
+
+  liveRecognition.onstart=()=>{
+    liveIsRunning=true;
+    setLiveUI(true);
+  };
+
+  liveRecognition.onresult=(e)=>{
+    let interim='',final='';
+    for(let i=e.resultIndex;i<e.results.length;i++){
+      const t=e.results[i][0].transcript;
+      if(e.results[i].isFinal) final+=t;
+      else interim+=t;
+    }
+    if(final) liveCurrentFinal+=final;
+    liveInterim=interim;
+
+    // Update original display
+    updateLiveOriginal(liveCurrentFinal, liveInterim);
+
+    // Auto-translate when speech pauses
+    if(translateTimer) clearTimeout(translateTimer);
+    const fullText=(liveCurrentFinal+interim).trim();
+    if(fullText && fullText!==lastTranslatedText){
+      translateTimer=setTimeout(()=>autoTranslate(liveCurrentFinal.trim()||interim.trim()),TRANSLATE_DELAY);
+    }
+  };
+
+  liveRecognition.onerror=(e)=>{
+    if(e.error==='no-speech') return; // ignore silence
+    if(e.error==='not-allowed'){
+      document.getElementById('live-status').textContent='マイクが拒否されました。設定 > Safari > マイク を許可してください。';
+      stopLive(); return;
+    }
+  };
+
+  liveRecognition.onend=()=>{
+    if(liveIsRunning){try{liveRecognition.start();}catch(e){}}
+  };
+
+  liveRecognition.start();
+}
+
+function stopLive() {
+  liveIsRunning=false;
+  if(liveRecognition){try{liveRecognition.stop();}catch(e){}liveRecognition=null;}
+  if(translateTimer){clearTimeout(translateTimer);translateTimer=null;}
+  setLiveUI(false);
+  // Final translate of remaining text
+  if(liveCurrentFinal.trim() && liveCurrentFinal.trim()!==lastTranslatedText){
+    autoTranslate(liveCurrentFinal.trim());
   }
 }
 
-function clearVoice() {
-  transcriptFinal = '';
-  const box = document.getElementById('transcript-box');
-  box.innerHTML = '<span style="color:var(--muted);font-style:italic">録音すると文字起こし結果がここに表示されます。手動入力も可能です。</span>';
-  document.getElementById('lang-pill').style.display = 'none';
-  const r = document.getElementById('voice-result');
-  r.classList.add('empty'); r.textContent = '翻訳結果がここに表示されます';
-  setStatus('voice-status', '');
-  setRecState('idle', 'マイクボタンを押して録音開始');
-  setBadge('off', '待機中');
-  clearWave();
-  document.getElementById('stat-time').textContent = '00:00';
+function setLiveUI(running) {
+  const btn=document.getElementById('live-mic-btn');
+  const micSvg=document.getElementById('live-mic-svg');
+  const stopSvg=document.getElementById('live-stop-svg');
+  const dot=document.getElementById('live-rec-dot');
+  const label=document.getElementById('live-rec-label');
+  const status=document.getElementById('live-status');
+  if(running){
+    btn.className='live-mic-btn recording';
+    micSvg.style.display='none'; stopSvg.style.display='';
+    dot.className='live-rec-dot blink';
+    label.textContent='録音中';
+    status.textContent='話しかけると自動で翻訳されます';
+  } else {
+    btn.className='live-mic-btn';
+    micSvg.style.display=''; stopSvg.style.display='none';
+    dot.className='live-rec-dot';
+    label.textContent='停止中';
+    status.textContent='タップして同時翻訳を開始';
+  }
+}
+
+function updateLiveOriginal(final, interim) {
+  const el=document.getElementById('live-original');
+  el.className='live-text';
+  if(!final && !interim){el.className='live-text empty';el.textContent='マイクボタンを押して同時翻訳を開始';return;}
+  el.innerHTML='';
+  if(final){
+    const f=document.createElement('span');
+    f.textContent=final;
+    el.appendChild(f);
+  }
+  if(interim){
+    const i=document.createElement('span');
+    i.className='interim'; i.textContent=interim;
+    el.appendChild(i);
+  }
+  // Auto scroll
+  el.parentElement.scrollTop=el.parentElement.scrollHeight;
+}
+
+async function autoTranslate(text) {
+  if(!text || text===lastTranslatedText) return;
+  lastTranslatedText=text;
+  const tgt=document.getElementById('live-tgt-lang').value;
+  const badge=document.getElementById('translating-badge');
+  const transEl=document.getElementById('live-translation');
+  badge.className='translating-badge show';
+  try{
+    const result=await googleTranslate(text,'auto',tgt);
+    transEl.className='live-translation';
+    transEl.textContent=result;
+    transEl.parentElement.scrollTop=transEl.parentElement.scrollHeight;
+    badge.className='translating-badge';
+    // Save to history when final text is confirmed
+    if(liveCurrentFinal.trim()===text){
+      addToHistory(text,result);
+      liveCurrentFinal=''; liveInterim='';
+      lastTranslatedText='';
+      updateLiveOriginal('','');
+    }
+  }catch(e){
+    badge.className='translating-badge';
+  }
+}
+
+function addToHistory(orig, trans) {
+  historyItems.unshift({orig,trans});
+  const list=document.getElementById('history-list');
+  const hist=document.getElementById('live-history');
+  hist.style.display='block';
+  list.innerHTML='';
+  historyItems.slice(0,10).forEach(item=>{
+    const div=document.createElement('div');
+    div.className='history-item';
+    div.innerHTML=`<div class="history-orig">${item.orig}</div><div class="history-trans">${item.trans}</div>`;
+    list.appendChild(div);
+  });
+}
+
+function clearLive() {
+  liveCurrentFinal=''; liveInterim=''; lastTranslatedText='';
+  historyItems.length=0;
+  document.getElementById('live-original').className='live-text empty';
+  document.getElementById('live-original').textContent='マイクボタンを押して同時翻訳を開始';
+  document.getElementById('live-translation').className='live-translation empty';
+  document.getElementById('live-translation').textContent='翻訳結果がここに表示されます';
+  document.getElementById('live-history').style.display='none';
+  document.getElementById('history-list').innerHTML='';
 }
 </script>
 </body>
