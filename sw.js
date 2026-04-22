@@ -1,4 +1,4 @@
-const CACHE_NAME = 'kotobase-v1';
+const CACHE_NAME = 'kotobase-v1.0.1';
 const ASSETS = [
   '/kotobase/',
   '/kotobase/index.html',
